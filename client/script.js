@@ -71,15 +71,15 @@ const handleSubmit=async (e)=>{
 
   // fetch data from server = bot response
 
-  const response= await fetch("http://localhost:5000",{
-    method: 'POST',
+  const response = await fetch("https://mes19-ai-bot-server.vercel.app", {
+    method: "POST",
     headers: {
-      'Content-Type': 'application/json'
+      "Content-Type": "application/json",
     },
     body: JSON.stringify({
-      prompt: data.get('prompt')
-    })
-  })
+      prompt: data.get("prompt"),
+    }),
+  });
 
   clearInterval(loadInterval);
   messageDiv.innerHTML='';
